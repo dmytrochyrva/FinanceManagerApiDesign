@@ -1,0 +1,27 @@
+#%RAML 1.0
+---
+title: Finance Manager API
+baseUrl: https://finance.manager.com/api{version}
+version: v1
+
+resourceTypes: !include resourceTypes/index.raml
+
+/operations:
+  type: 
+    collection:
+      exampleCollection: !include samples/operations.json
+      exampleCollectionItem: !include samples/operation.json
+  /{operationId}:
+    type: 
+      collection-item:
+        exampleCollectionItem: !include samples/operation.json
+
+/categories:
+  type: 
+    collection:
+      exampleCollection: !include samples/categories.json
+      exampleCollectionItem: !include samples/category.json
+  /{categoryId}:
+    type: 
+      collection-item:
+        exampleCollectionItem: !include samples/category.json

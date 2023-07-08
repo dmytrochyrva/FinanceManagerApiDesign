@@ -1,0 +1,9 @@
+{
+	"id": 1,
+	"date": "2023-06-06T00:00:00",
+	"description": "Salary",
+	"category": "Income",
+	"income": 1000,
+	"debit": 0,
+	"balance": 1000
+}

@@ -1,0 +1,95 @@
+collection:
+  description: Collection of <<resourcePathName>>
+  get:
+    description: Retrive list of <<resourcePathName>>
+    responses:
+      200:
+        body:
+          application/json:
+            example: <<exampleCollection>>
+      401:
+        body:
+          applicatoin/json:
+            example: !include ../samples/errors/4xx/401.json
+      500:
+        body:
+          application/json:
+            example: !include ../samples/errors/5xx/500.json
+  post:
+    description: Create new <<resourcePathName|!singularize>>
+    responses:
+      201:
+        body:
+          application/json:
+            example: <<exampleCollectionItem>>
+      401:
+        body:
+          application/json:
+            example: !include ../samples/errors/4xx/401.json
+      400:
+        body:
+          application/json:
+            example: !include ../samples/errors/4xx/400.json
+      500:
+        body:
+          application/json:
+            example: !include ../samples/errors/5xx/500.json
+            
+collection-item:
+    get:
+      description: Retrive <<resourcePathName|!singularize>> by <<resourcePathName|!singularize>>Id
+      responses:
+        200: 
+          body:
+            application/json:
+              example: <<exampleCollectionItem>>
+        401:
+          body:
+            application/json:
+              example: !include ../samples/errors/4xx/401.json
+        404:
+          body:
+            application/json:
+              example: !include ../samples/errors/4xx/404.json
+        500:
+          body:
+            application/json:
+              example: !include ../samples/errors/5xx/500.json
+    patch:
+      description: Update <<resourcePathName|!singularize>> by <<resourcePathName|!singularize>>Id
+      responses:
+        200:
+          body:
+            application/json:
+              example: <<exampleCollectionItem>>
+        401:
+          body:
+            application/json:
+              example: !include ../samples/errors/4xx/401.json
+        204:
+          body:
+            application/json:
+              example: !include ../samples/errors/2xx/204.json
+        500:
+          body:
+            application/json:
+              example: !include ../samples/errors/5xx/500.json
+    delete:
+      description: Delete <<resourcePathName|!singularize>> by <<resourcePathName|!singularize>>Id
+      responses:
+        202:
+          body:
+            application/json:
+              example: !include ../samples/errors/2xx/202.json
+        204:
+          body:
+            application/json:
+              example: !include ../samples/errors/2xx/204.json
+        400:
+          body:
+            application/json:
+              example: !include ../samples/errors/4xx/400.json
+        500:
+          body:
+            application/json:
+              example: !include ../samples/errors/5xx/500.json
